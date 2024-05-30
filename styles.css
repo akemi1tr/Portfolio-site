@@ -1,0 +1,373 @@
+/* Genel Stil */
+body {
+    /* Sayfanın genel stilini belirler */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Sidebar ve Menü */
+.sidebar {
+    /* Sabit bir yan menü oluşturur */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: 2px solid #111;
+    padding: 20px;
+    overflow-x: hidden;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+#sidebar.show {
+    /* Yan menü görünür hale gelir */
+    transform: translateX(0);
+}
+
+.sidebar-content {
+    /* Yan menü içeriğini düzenler */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.sidebar h1 {
+    /* Yan menüdeki başlık stilini belirler */
+    font-size: 2em;
+    color: #e50914;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+    /* Yan menüdeki navigasyon listesinin stilini belirler */
+    list-style-type: none;
+    padding: 0;
+    flex: 1;
+}
+
+.sidebar nav ul li {
+    /* Yan menüdeki liste elemanlarının stilini belirler */
+    margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+    /* Yan menüdeki bağlantıların stilini belirler */
+    color: #e50914;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: block;
+    transition: color 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+    /* Yan menüdeki bağlantıların üzerine gelindiğinde stilini değiştirir */
+    color: #fff;
+}
+
+.close-menu {
+    /* Yan menüyü kapatmak için kullanılan butonun stilini belirler */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    color: #fff;
+    cursor: pointer;
+}
+
+.open-menu {
+    /* Yan menüyü açmak için kullanılan butonun stilini belirler */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* İçerik */
+.content-wrapper {
+    /* İçerik alanını düzenler */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-left: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    /* Ana içerik alanını düzenler */
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.intro {
+    /* Giriş bölümünü düzenler */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(2px solid #000000b3, #000000b3), url('background.jpg') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+}
+
+.profile-pic {
+    /* Profil resminin stilini belirler */
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    border: 5px solid #e50914;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    /* Profil resmine zıplama animasyonu ekler */
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+h2, h1 {
+    /* Başlıkların stilini belirler */
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.full-page {
+    /* Tam sayfa bölümlerini düzenler */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section {
+    /* Bölüm alanlarını düzenler */
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px 0;
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Bilgi ve Yetenekler */
+.info-grid {
+    /* Bilgi ve yetenekler bölümünü düzenler */
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.skills {
+    /* Yetenekler bölümünü düzenler */
+    width: 100%;
+}
+
+.skills p {
+    /* Yetenekler paragraf stilini belirler */
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.skill-bar {
+    /* Yetenek barlarının stilini belirler */
+    height: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.skill-bar span {
+    /* Yetenek barlarının içindeki dolu kısmın stilini belirler */
+    display: block;
+    height: 100%;
+    background-color: #e50914;
+}
+
+/* İletişim Butonu */
+.contact-button {
+    /* İletişim butonunun stilini belirler */
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+/* Galeri */
+.gallery {
+    /* Galeri bölümünü düzenler */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gallery-item {
+    /* Galeri öğelerinin stilini belirler */
+    position: relative;
+    margin: 20px;
+    width: 200px;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    /* Galeri öğelerindeki resimlerin stilini belirler */
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    /* Galeri öğelerindeki resimlerin üzerine gelindiğinde stilini değiştirir */
+    transform: scale(1.1);
+}
+
+.gallery-item-caption {
+    /* Galeri öğelerindeki açıklama kısmının stilini belirler */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-item-caption {
+    /* Galeri öğelerindeki açıklama kısmının üzerine gelindiğinde stilini değiştirir */
+    opacity: 1;
+}
+
+/* İletişim Bilgileri */
+.contact-info {
+    /* İletişim bilgileri bölümünü düzenler */
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    /* İletişim öğelerinin stilini belirler */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-item img {
+    /* İletişim öğelerindeki resimlerin stilini belirler */
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* İletişim Formu */
+form {
+    /* İletişim formunu düzenler */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.form-row {
+    /* Form satırlarını düzenler */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form-row input {
+    /* Form satırındaki input alanlarının stilini belirler */
+    flex: 1;
+    margin: 10px;
+}
+
+input, textarea {
+    /* Input ve textarea alanlarının stilini belirler */
+    margin: 10px 0;
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    border: 2px solid #e50914;
+    border-radius: 5px;
+    background-color: #333333;
+    color: #fff;
+    outline: none;
+}
+
+button {
+    /* Butonların stilini belirler */
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    /* Butonların üzerine gelindiğinde stilini değiştirir */
+    background-color: #b00711;
+}
+
+/* Footer */
+footer {
+    /* Altbilgi (footer) bölümünü düzenler */
+    background-color: 2px solid #333333;
+    color: #e50914;
+    text-align: center;
+    padding: 10px;
+    width: 95%;
+    margin-top: auto; 
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+    /* Fade-in animasyonu tanımlar */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

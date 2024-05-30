@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <!-- Meta veriler ve başlık -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolyo</title>
+    <!-- CSS dosyasını dahil eder -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- JavaScript dosyasını dahil eder -->
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Yan menü -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+            <h1>Akemi</h1>
+            <!-- Menüyü kapatma butonu -->
+            <button class="close-menu" onclick="toggleMenu()">×</button>
+            <nav>
+                <ul>
+                    <!-- Menü bağlantıları -->
+                    <li><a href="#ana-sayfa" onclick="toggleMenu()">Ana Sayfa</a></li>
+                    <li><a href="#hakkimda" onclick="toggleMenu()">Hakkımda</a></li>
+                    <li><a href="#islerim" onclick="toggleMenu()">Portfolyo</a></li>
+                    <li><a href="#iletisim" onclick="toggleMenu()">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- Menüyü açma butonu -->
+    <button class="open-menu" id="open-menu" onclick="toggleMenu()">☰ Menü</button>
+
+    <!-- İçerik alanı -->
+    <div class="content-wrapper">
+        <main id="main-content">
+            <!-- Ana sayfa bölümü -->
+            <section id="ana-sayfa" class="intro">
+                <div class="intro-content">
+                    <img src="https://cdn.discordapp.com/attachments/1232748961115275455/1244289727801327696/855979873-algos-teria.jpg?ex=66553b5c&is=6653e9dc&hm=49d9b66298d063d8bfe6318f0f9ad8c1f19dc6b31d26df4e6e899a7a0bea56b9&" alt="Akemi" class="profile-pic">
+                    <h2>Merhaba ben Akemi</h2>
+                </div>
+            </section>
+
+            <!-- Hakkımda bölümü -->
+            <section id="hakkimda" class="full-page">
+                <h2>Hakkımda</h2>
+                <p>Websiteme hoşgeldin! Ben Akemi & Web Developer</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+                <div class="info-grid">
+                    <div>
+                        <p>Doğum Günü : 26 ekim </p>
+                        <p>Website : Akemi.web.tr daha eklenmedi</p>
+                        <p>Instagram : Akemi böyle bir insta yok .d </p>
+                    </div>
+                    <div>
+                        <p>Yaş : 17</p>
+                        <p>Email : egee1814@gmail.com </p>
+                        <p>Şehir : İstanbul</p>
+                    </div>
+                </div>
+
+                <div class="skills">
+                    <p>HTML <span>%77</span></p>
+                    <p class="skill-bar"><span style="width: 77%;"></span></p>
+                    <p>CSS <span>%60</span></p>
+                    <p class="skill-bar"><span style="width: 60%;"></span></p>
+                    <p>JS <span>%53</span></p>
+                    <p class="skill-bar"><span style="width: 53%;"></span></p>
+                    <p>Tecrübe <span>%64</span></p>
+                    <p class="skill-bar"><span style="width: 64%;"></span></p>
+                </div>
+
+                <!-- İletişim butonu -->
+                <button class="contact-button" onclick="scrollToSection('iletisim')">İletişim</button>
+            </section>
+
+            <!-- Portfolyo bölümü -->
+            <section id="islerim">
+                <h2>Portfolyo</h2>
+                <div class="gallery">
+                    <!-- Galeri öğeleri -->
+                    <div class="gallery-item">
+                        <img src="https://cdn.discordapp.com/attachments/1232748961115275455/1244289727801327696/855979873-algos-teria.jpg?ex=66553b5c&is=6653e9dc&hm=49d9b66298d063d8bfe6318f0f9ad8c1f19dc6b31d26df4e6e899a7a0bea56b9&" alt="Proje 1">
+                        <div class="gallery-item-caption">Akemi baba piro</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://cdn.discordapp.com/attachments/1232748961115275455/1244289727801327696/855979873-algos-teria.jpg?ex=66553b5c&is=6653e9dc&hm=49d9b66298d063d8bfe6318f0f9ad8c1f19dc6b31d26df4e6e899a7a0bea56b9&" alt="Proje 2">
+                        <div class="gallery-item-caption">Akemi baba piro</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://cdn.discordapp.com/attachments/1232748961115275455/1244289727801327696/855979873-algos-teria.jpg?ex=66553b5c&is=6653e9dc&hm=49d9b66298d063d8bfe6318f0f9ad8c1f19dc6b31d26df4e6e899a7a0bea56b9&" alt="Proje 3">
+                        <div class="gallery-item-caption">Akemi baba piro</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://cdn.discordapp.com/attachments/1232748961115275455/1244289727801327696/855979873-algos-teria.jpg?ex=66553b5c&is=6653e9dc&hm=49d9b66298d063d8bfe6318f0f9ad8c1f19dc6b31d26df4e6e899a7a0bea56b9&" alt="Proje 4">
+                        <div class="gallery-item-caption">Akemi baba piro</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://cdn.discordapp.com/attachments/1232748961115275455/1244289727801327696/855979873-algos-teria.jpg?ex=66553b5c&is=6653e9dc&hm=49d9b66298d063d8bfe6318f0f9ad8c1f19dc6b31d26df4e6e899a7a0bea56b9&" alt="Proje 5">
+                        <div class="gallery-item-caption">Akemi baba piro</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- İletişim bölümü -->
+            <section id="iletisim">
+                <h2>İletişim</h2>
+                <p>Benimle sosyal medya hesaplarımdan iletişime geçebilirsin.</p>
+                <p>Yazılara tıklayarak bana ulaş</p>
+                <div class="contact-info">
+                    <!-- İletişim bilgileri -->
+                    <div class="contact-item">
+                        <img src="https://img.icons8.com/color/96/000000/instagram-new.png" alt="Instagram Icon">
+                        <p>Instagram</p>
+                        <a href="https://www.instagram.com/Akemi">Akemi</a>
+                    </div>
+                    <div class="contact-item">
+                        <img src="https://img.icons8.com/color/96/000000/discord-logo.png" alt="Discord Icon">
+                        <p>Discord</p>
+                        <a href="#">Profilimi Görmek İçin Tıkla</a>
+                    </div>
+                    <div class="contact-item">
+                        <img src="https://img.icons8.com/color/96/000000/email.png" alt="Email Icon">
+                        <p>Email</p>
+                        <a href="mailto:egee1814@gmail.com">egee1814@gmail.com </p>
+                        <p>Şehir : İstanbul</p>
+                    </div>
+                </div>
+
+                <div class="skills">
+                    <p>HTML <span>%77</span></p>
+                    <p class="skill-bar"><span style="width: 77%;"></span></p>
+                    <p>CSS <span>%60</span></p>
+                    <p class="skill-bar"><span style="width: 60%;"></span></p>
+                    <p>JS <span>%53</span></p>
+                    <p class="skill-bar"><span style="width: 53%;"></span></p>
+                    <p>Tecrübe <span>%64</span></p>
+                    <p class="skill-bar"><span style="width: 64%;"></span></p>
+                </div>
+
+                <button class="contact-button" onclick="scrollToSection('iletisim')">İletişim</button>
+            </section>
+
+            <section id="islerim">
+                <h2>Portfolyo</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="https://cdn.discordapp.com/attachments/1232748961115275455/1244289727801327696/855979873-algos-teria.jpg?ex=66553b5c&is=6653e9dc&hm=49d9b66298d063d8bfe6318f0f9ad8c1f19dc6b31d26df4e6e899a7a0bea56b9&" alt="Proje 1">
+                        <div class="gallery-item-caption">Akemi baba piro</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://cdn.discordapp.com/attachments/1232748961115275455/1244289727801327696/855979873-algos-teria.jpg?ex=66553b5c&is=6653e9dc&hm=49d9b66298d063d8bfe6318f0f9ad8c1f19dc6b31d26df4e6e899a7a0bea56b9&" alt="Proje 2">
+                        <div class="gallery-item-caption">Akemi baba piro</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://cdn.discordapp.com/attachments/1232748961115275455/1244289727801327696/855979873-algos-teria.jpg?ex=66553b5c&is=6653e9dc&hm=49d9b66298d063d8bfe6318f0f9ad8c1f19dc6b31d26df4e6e899a7a0bea56b9&" alt="Proje 3">
+                        <div class="gallery-item-caption">Akemi baba piro</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://cdn.discordapp.com/attachments/1232748961115275455/1244289727801327696/855979873-algos-teria.jpg?ex=66553b5c&is=6653e9dc&hm=49d9b66298d063d8bfe6318f0f9ad8c1f19dc6b31d26df4e6e899a7a0bea56b9&" alt="Proje 4">
+                        <div class="gallery-item-caption">Akemi baba piro</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://cdn.discordapp.com/attachments/1232748961115275455/1244289727801327696/855979873-algos-teria.jpg?ex=66553b5c&is=6653e9dc&hm=49d9b66298d063d8bfe6318f0f9ad8c1f19dc6b31d26df4e6e899a7a0bea56b9&" alt="Proje 5">
+                        <div class="gallery-item-caption">Akemi baba piro</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="iletisim">
+                <h2>İletişim</h2>
+                <p>Benimle sosyal medya hesaplarımdan iletişime geçebilirsin.</p>
+                <p>Yazılara tıklayarak bana ulaş</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <img src="https://img.icons8.com/color/96/000000/instagram-new.png" alt="Instagram Icon">
+                        <p>Instagram</p>
+                        <a href="https://www.instagram.com/Akemi">Akemi</a>
+                    </div>
+                    <div class="contact-item">
+                        <img src="https://img.icons8.com/color/96/000000/discord-logo.png" alt="Discord Icon">
+                        <p>Discord</p>
+                        <a href="#">Profilimi Görmek İçin Tıkla</a>
+                    </div>
+                    <div class="contact-item">
+                        <img src="https://img.icons8.com/color/96/000000/email.png" alt="Email Icon">
+                        <p>Email</p>
+                        <a href="mailto:egee1814@gmail.com">egee1814@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <img src="https://img.icons8.com/color/96/000000/internet.png" alt="Website Icon">
+                        <p>Website</p>
+                        <a href="eklenicek">Akemi.web.tr eklenicektir.</a>
+                    </div>
+                </div>
+                <p style="color: #f00;">Benimle iletişime geçebilirsin</p>
+                <p>Akınıza takılan herhangi bir soruyu sorabilirsiniz</p>
+                <form id="iletisim-formu">
+                    <div class="form-row">
+                        <input type="text" id="isim" name="isim" placeholder="İsim" required>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <input type="text" id="konu" name="konu" placeholder="Konu" required>
+                    <textarea id="mesaj" name="mesaj" placeholder="Mesaj" required></textarea>
+                    <button type="submit">Mesaj Gönder</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Akemi</p>
+        </footer>
+    </div>
+</body>
+</html>
